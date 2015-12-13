@@ -1,0 +1,97 @@
+﻿#content
+{
+    margin-top:30px;
+    min-height:500px;
+}
+.starsDiv
+{
+    width: 220px;
+    float: left;
+}
+.starsDiv a
+{
+    text-decoration:none;
+    color:#565656;
+    font-size:14px;
+}
+.photoDiv{float:right;width:710px;padding-left:10px;}
+
+#StarsInfoDiv
+{
+    display: none;
+    height: 590px;
+	border-top:1px solid #d4d4d4;
+	margin-top:10px;
+}
+
+#CurStarName{height: 30px;clear: both;font-size:14px;font-weight:700;padding-left:10px;color:#af0a0a;line-height:30px;}
+#PhotoArea{padding-bottom:5px;padding-right:5px;width:705px;height:466px;background:url(../../Images/gallery/showphotobg.png) no-repeat right bottom;}
+#PhotoLoad
+{
+    height: 471px;
+    text-align:center;
+    line-height:471px;
+    clear: both;
+    display: none;
+    position:relative;
+}
+#PhotoLoad img
+{
+    position:absolute;
+    top:220px;
+    left:344px;
+}
+#PhotoInnerArea{}
+#PhotoList:after{clear:both;content:'.';display:block;visibility:hidden;font-size:0;line-height:0;}
+#PhotoList{position:relative;zoom:1;height:160px;padding:15px 50px;background:url(../Images/gallery/showphotobg1.png) no-repeat center 0;}
+#PhotoPre{position:absolute;left:10px;background:url(../../Images/gallery/leftarr.png) no-repeat left center;text-indent:-99999px; cursor:pointer;}
+#PhotoNext{position:absolute;right:10px;background:url(../../Images/gallery/rightarr.png) no-repeat right center;text-indent:-99999px; cursor:pointer;}
+.preNormal
+{width: 30px;height: 150px;float: left;color: #CCC;}
+.preActive{width: 30px; height: 150px;float: left;}
+.nextNormal
+{
+    width: 30px;
+    height: 150px;
+    float: left;
+    color: #CCC;
+}
+.nextActive
+{
+    width: 30px;
+    height: 150px;
+    float: left;
+    color: Red;
+}
+
+#PhotoNext
+{
+    width: 30px;
+    height: 150px;
+    float: left;
+}
+
+#PhotoTbList
+{
+    float: left;
+    overflow: hidden;
+}
+
+.photoContent
+{
+    float: left;
+}
+.photoActive{width:110px;height:141px;border: solid 1px #b70b18;}
+.photoNormal{width:110px;height:141px;padding:1px;background:url(../Images/gallery/showphotobg2.png) no-repeat;}
+.w-nitm{line-height:60px;}
+.w-nitm img{margin-right:10px; vertical-align:middle;}
+.u-nitm{position:relative;zoom:1;padding-left:34px;margin-top:10px;line-height:26px;}
+.u-nitm img{position:absolute;left:3px;top:0;}
+.u-nitm a{margin-right:1em;white-space:nowrap;}
+
+.nav li a#A5 {
+    background-image:url(../../Images/web/menu_over.png);
+     _background-image:url(../../Images/web/menu_over.gif);
+    background-repeat:no-repeat;
+    background-position:0 0;
+}

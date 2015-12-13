@@ -1,0 +1,215 @@
+﻿.schIptNor {
+	color: #555;
+	width:180px;
+	margin-left:10px;
+	vertical-align:middle;
+}
+.schIptAct {
+	color: #000;
+	width:180px;
+	margin-left:10px;
+	vertical-align:middle;
+}
+.btnNor {
+	background-image:url(../../Images/web/btn_bg.png);
+	background-repeat:no-repeat;
+	background-position:0 0px;
+	width:52px;
+	height:24px;
+	display:inline-block;
+	text-align:center;
+	cursor:pointer;
+	color:#333;
+	margin-left:5px;
+	line-height:24px;
+}
+.btnAct {
+	background-image:url(../../Images/web/btn_bg.png);
+	background-repeat:no-repeat;
+	background-position:0 -24px;
+	width:52px;
+	height:24px;
+	display:inline-block;
+	text-align:center;
+	cursor:pointer;
+	color:#fff;
+	margin-left:5px;
+	line-height:24px;
+	cursor: pointer;
+}
+/* TipTip CSS - Version 1.2 */
+
+	#tiptip_holder {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 99999;
+	}
+	
+	#tiptip_holder.tip_top {
+		padding-bottom: 5px;
+	}
+	
+	#tiptip_holder.tip_bottom {
+		padding-top: 5px;
+	}
+	
+	#tiptip_holder.tip_right {
+		padding-left: 5px;
+	}
+	
+	#tiptip_holder.tip_left {
+		padding-right: 5px;
+	}
+	
+	#tiptip_content {
+		font-size: 11px;
+		color: #d9e5f6;
+		padding: 10px 15px;
+		border: 1px solid rgba(255,255,255,0.25);
+		/*
+		background-color: rgb(25,25,25);
+		background-color: rgba(25,25,25,0.92);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+		*/
+		background-color: rgb(25,25,25);
+		
+		border-radius: 5px;	
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		/*box-shadow: 0 0 3px #555;
+		-webkit-box-shadow: 0 0 3px #555;
+		-moz-box-shadow: 0 0 3px #555;*/
+	}
+	
+	#tiptip_arrow, #tiptip_arrow_inner {
+		position: absolute;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 6px;
+		height: 0;
+		width: 0;
+	}
+	
+	#tiptip_holder.tip_top #tiptip_arrow {
+		border-top-color: #fff;
+		border-top-color: rgba(255,255,255,0.35);
+	}
+	
+	#tiptip_holder.tip_bottom #tiptip_arrow {
+		border-bottom-color: #fff;
+		border-bottom-color: rgba(255,255,255,0.35);
+	}
+	
+	#tiptip_holder.tip_right #tiptip_arrow {
+		border-right-color: #fff;
+		border-right-color: rgba(255,255,255,0.35);
+	}
+	
+	#tiptip_holder.tip_left #tiptip_arrow {
+		border-left-color: #fff;
+		border-left-color: rgba(255,255,255,0.35);
+	}
+	
+	#tiptip_holder.tip_top #tiptip_arrow_inner {
+		margin-top: -7px;
+		margin-left: -6px;
+		border-top-color: rgb(25,25,25);
+		border-top-color: rgba(25,25,25,0.92);
+	}
+	
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+		margin-top: -5px;
+		margin-left: -6px;
+		border-bottom-color: rgb(25,25,25);
+		border-bottom-color: rgba(25,25,25,0.92);
+	}
+	
+	#tiptip_holder.tip_right #tiptip_arrow_inner {
+		margin-top: -6px;
+		margin-left: -5px;
+		border-right-color: rgb(25,25,25);
+		border-right-color: rgba(25,25,25,0.92);
+	}
+	
+	#tiptip_holder.tip_left #tiptip_arrow_inner {
+		margin-top: -6px;
+		margin-left: -7px;
+		border-left-color: rgb(25,25,25);
+		border-left-color: rgba(25,25,25,0.92);
+	}
+	
+	/* Webkit Hacks  */
+	@media screen and (-webkit-min-device-pixel-ratio:0) {	
+		#tiptip_content {atio:0}	
+		#tiptip_content {
+			padding: 4px 8px 5px 8px;
+			background-color: rgba(45,45,45,0.88);
+		}
+		#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
+			border-bottom-color: rgba(45,45,45,0.88);
+		}
+		#tiptip_holder.tip_top #tiptip_arrow_inner { 
+			border-top-color: rgba(20,20,20,0.92);
+		}
+	}/*左侧列表样式*/
+.left{
+   margin-left:7px;
+}
+.left a {
+	color:#A20F1A;
+	text-decoration:none;
+}
+.left a:hover {
+	text-decoration: underline;
+}
+.left h3.new_title {
+	font-size:24px;
+	padding:13px 0;
+        margin-left:5px;
+}
+.left .show {
+	padding:4px 0;
+	color:#8E8E8E;
+        margin-left:11px;
+}
+.left .data {
+	margin-right:3px;
+}
+.left .text {
+	padding:10px 0 10px 10px;
+	line-height:25px;
+}
+.left .read {
+    margin:10px;
+	background-image:url(../../Images/web/new_line.png);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+	padding:12px 0;
+	position:relative;
+	color:#8e8e8e;
+}
+.left .read a {
+	position:absolute;
+	right:0;
+	bottom:12px;
+}
+.left .tagSpan {
+	color:#A20F1A;
+}
+.spTag
+{
+    color:#A20F1A;
+    margin-right:10px;
+}
+.nav li a#A2 {
+	background-image:url(../../Images/web/menu_over.png);
+	 _background-image:url(../../Images/web/menu_over.gif);
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
+.banner
+{
+    margin-bottom:8px;
+}

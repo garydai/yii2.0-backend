@@ -1,0 +1,76 @@
+﻿.middle
+{
+    background:none;
+    margin-top:55px;
+}
+.middle h3
+{
+    font-size:24px;
+    margin:15px 30px;
+    text-align:center;
+    color:#A20F1A;
+}
+.middle .show
+{
+    margin-bottom:26px;
+    background-image:url(../../Images/web/new_line.png);
+    background-position:0 bottom;
+    background-repeat:repeat-x;
+    padding:12px 0;
+    color:#727578;
+    text-align:center;
+}
+.middle .show em{
+    margin-right:20px;
+}
+.middle .show tt{
+    margin-left:5px;
+}
+.middle .text{
+    line-height:25px;
+}
+.middle .read{
+    color:#A20F1A;
+    background-image:url(../../Images/web/new_line.png);
+    background-position:0 bottom;
+    background-repeat:repeat-x;
+    padding:12px 0;
+    text-align:right;
+    margin-bottom:10px;
+    position:relative;
+    margin-top:30px;
+}
+.middle .fun em{
+    margin:0 10px;
+}
+.middle .read .page
+{
+    position:absolute;
+    left:20px;
+    bottom:5px;
+    width:600px;
+    text-align:right;
+}
+.page a{
+    color:#666;
+    text-decoration:underline;
+    margin:0 5px;
+}
+.cur_page
+{
+    font-weight:bold;
+    color:#A20F1A;
+    margin:0 5px;
+    font-size:16px;
+}
+.spTag
+{
+    margin-right:10px;
+    color:#A20F1A;
+}
+.nav li a#A2 {
+	background-image:url(../../Images/web/menu_over.png);
+	_background-image:url(../../Images/web/menu_over.gif);
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
