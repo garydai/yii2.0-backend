@@ -28,7 +28,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['get'],
                 ],
             ],
         ];
@@ -50,9 +50,26 @@ class SiteController extends Controller
     public function actionIndex()
     {
         
-        $news = News::find()->all();
-      //  var_dump($news);
-        //echo $news[0]->title;
+        if (!\Yii::$app->user->isGuest) {
+
+            return $this->render('index');
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->render('index');
+        }
+        return $this->render('login', [
+            'model' => $model,
+        ]);
+
+       
+      //  return $this->render('index');
+    }
+    public function actionOut()
+    {
+        Yii::$app->user->logout();
+
         return $this->render('index');
     }
 

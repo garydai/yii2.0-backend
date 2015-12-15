@@ -122,11 +122,11 @@ AppAsset::register($this);
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/post/index">后台管理系统</a>
+      <a class="navbar-brand" href="/index.php?r=site/index">后台管理系统</a>
     </div>
 
     <div class="nav navbar-nav navbar-right">
-     <li><a href="/Admin/adminuser/logout">登出</a></li>
+     <li><a href="/index.php?r=site/out">登出</a></li>
     </div>
 
   </div>
@@ -143,7 +143,7 @@ AppAsset::register($this);
 
 <div class="container-fluid">
 
-
+    <?php if (!\Yii::$app->user->isGuest) {?>
        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
             <ul class="nav" >
                 <li class="active"><a href="/index.php?r=site/index">首页</a></li>
@@ -152,6 +152,7 @@ AppAsset::register($this);
         
     </ul>
         </div>
+        <?php }?>
 
 
  <div class="col-xs-12 col-sm-10">
