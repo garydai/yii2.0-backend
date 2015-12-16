@@ -62,62 +62,52 @@ $(document).ready(function() {
 
 
 
-        $('#summernote').summernote({
-                  height: 400,                 // set editor height
-
-
-                onImageUpload: function(files, editor, welEditable)
-                {
-                        sendFile(files[0], editor, welEditable);
-                }
-
-        });
-
-
+  $('#summernote').summernote({
+          height: 400,                 // set editor height
+          onImageUpload: function(files, editor, welEditable)
+          {
+          //  window.alert(files[0]);
+            sendFile(files[0], editor, welEditable);
+          }
+  });
 //  $('.summernote').destroy();
-
-
 });
 
-
-         function sendFile(file, editor, welEditable) {
-            data = new FormData();
-            data.append("file", file);
-            $.ajax({
-                data: data,
-                type: "POST",
-                url: "/schedule/upload_image",
-                cache: false,
-                contentType: false,
-
-
-
-                erocessData: false,
-                success: function(url) {
-                //      alert(url);
-                    editor.insertImage(welEditable, url);
-                }
-            });
+  function sendFile(file, editor, welEditable) {
+    data = new FormData();
+    data.append("file", file);
+   // window.alert(data);
+    $.ajax({
+        data: data,
+        type: "POST",
+        url: "/index.php?r=news/upload_image",
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(url) {
+             // alert(url);
+            editor.insertImage(welEditable, url);
         }
-
+    });
+  }
 
 var save = function() {
   var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 	var source = '';
 	var thumb = '';
   var title = document.getElementById("title").value;
-            $.ajax({
-                dataType: "json",
-                 data:{
-                        "title":title,
-                        "content":aHTML,
-                },
-                type: "POST",
-                url: "/index.php?r=news/save_news",
-                success: function() {
-                      alert('success');
-                }
-            });
+  $.ajax({
+      dataType: "json",
+       data:{
+              "title":title,
+              "content":aHTML,
+      },
+      type: "POST",
+      url: "/index.php?r=news/save_news",
+      success: function() {
+            alert('success');
+      }
+  });
 
 };
 
