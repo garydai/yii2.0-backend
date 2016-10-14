@@ -1,21 +1,18 @@
 <ol class="breadcrumb">
   <li><a href="/index.php?r=site/index">首页</a></li>
-  <li class="active">新闻管理</li>
+  <li class="active">友商管理</li>
 </ol>
-
-
-
-
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">新闻列表</div>
+  <div class="panel-heading">列表</div>
   <!-- Table -->
 
   <button type=button  class="btn btn-success"onclick="location.href =('/index.php?r=news/add')"> <span class="glyphicon glyphicon-plus"></span></button>
  </button>
-
+  <button type=button  class="btn btn-success"onclick="location.href =('/index.php?r=news/add_service')"> <span class="glyphicon glyphicon-plus"></span></button>
+ </button>
 
 
         <table id="grid-selection" class="table table-condensed table-hover table-striped">

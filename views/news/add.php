@@ -13,39 +13,37 @@
 
 <ol class="breadcrumb">
   <li><a href="index.php?r=site/index">首页</a></li>
-  <li><a href="index.php?r=news/index">新闻管理</a></li>
-  <li class="active">新增新闻</li>
+  <li><a href="index.php?r=news/index">友商管理</a></li>
+  <li class="active">新增友商</li>
 </ol>
 
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">新增新闻</div>
+  <div class="panel-heading">新增友商</div>
 
 
 
 
         <table class="table">
                 <tr>
-                <td>新闻标题</td>
+                <td>友商手机号</td>
 
-                        <td> <input type="text" name="title" id="title" ></td>
+                  <td> <input type="text" name="title" id="mobile" ></td>
                 </tr>
-
-
 
                 <tr>
+                <td>昵称</td>
 
-                    <td>新闻内容</td>
-
-                        <td>
-
-                        <div class="summernote" id="summernote"></div>
-
-                        </td>
-
+                  <td> <input type="text" name="title" id="nickname" ></td>
                 </tr>
+                
+                <tr>
+                <td>密码</td>
+                  <td> <input type="text" name="title" id="password" ></td>
+                </tr>
+
         </table>
 
 
@@ -58,52 +56,21 @@
 
 <script type="text/javascript">
 
-$(document).ready(function() {
-
-
-
-  $('#summernote').summernote({
-          height: 400,                 // set editor height
-          onImageUpload: function(files, editor, welEditable)
-          {
-          //  window.alert(files[0]);
-            sendFile(files[0], editor, welEditable);
-          }
-  });
-//  $('.summernote').destroy();
-});
-
-  function sendFile(file, editor, welEditable) {
-    data = new FormData();
-    data.append("file", file);
-   // window.alert(data);
-    $.ajax({
-        data: data,
-        type: "POST",
-        url: "/index.php?r=news/upload_image",
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(url) {
-             // alert(url);
-            editor.insertImage(welEditable, url);
-        }
-    });
-  }
 
 var save = function() {
-  var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
-	var source = '';
-	var thumb = '';
-  var title = document.getElementById("title").value;
+
+  var mobile = document.getElementById("mobile").value;
+  var nickname = document.getElementById("nickname").value;
+  var password = document.getElementById("password").value;
   $.ajax({
       dataType: "json",
        data:{
-              "title":title,
-              "content":aHTML,
+              "mobile":mobile,
+              "nickname":nickname,
+              "password":password
       },
       type: "POST",
-      url: "/index.php?r=news/save_news",
+      url: "/index.php?r=news/save_seller",
       success: function() {
             alert('success');
       }

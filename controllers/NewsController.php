@@ -8,8 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\News;
-
+use app\models\Order;
 class NewsController extends Controller
 {
     public $enableCsrfValidation = false;
@@ -51,8 +50,20 @@ class NewsController extends Controller
 
     public function actionIndex()
     {
-        $news = News::find()->all();  
-        return $this->render('index', ["news"=>$news]);
+      //  $news = News::find()->all();  
+      //  echo 1123;
+        return $this->render('index');
+    }
+
+    public function actionSave_seller()
+    {
+        echo 123;
+
+        $password = sha1($_POST['password']);
+        $sql="insert into User set Name = {$_POST['nickname']}, Mobile={$_POST['mobile']}, Password='{$password}'";
+        $connection=Yii::$app->db; 
+
+        $command=$connection->createCommand($sql)->execute();
     }
 
     public function actionAdd()
@@ -63,13 +74,42 @@ class NewsController extends Controller
 
     }
 
+    public function actionAdd_service()
+    {
+
+
+      //  $area = Area::model()->findAll();
+       return  $this->render('addservice');
+
+    }
+
+    public function actionSave_service()
+    {
+        //    $sql="insert into `Order` set Title = '{$_POST['title']}', Content='{$_POST['content']}',
+         //Bounty='{$_POST['reward']}', Orderer = {$_POST['id']}, Address='{$_POST['location']}',
+         // PaymentMethod = '{$_POST['payment']}', Request='{$_POST['require']}, Category='{$_POST['category']}', Recommended=1 ";
+                     $sql="insert into `Order` set Title = '{$_POST['title']}', Content='{$_POST['content']}', Bounty='{$_POST['reward']}', Orderer = {$_POST['id']}, Address='{$_POST['location']}', PaymentMethod = '{$_POST['payment']}', Request='{$_POST['require']}', Category={$_POST['category']}";
+         
+
+        $connection=Yii::$app->db; 
+
+        $command=$connection->createCommand($sql)->execute();
+        echo 1;
+
+
+    }
     public function actionGet_data()
     {
     //      var_dump($_POST);
-            $count = News::find()->count();
+            //$count = Order::find()->count();
             
+            $sql="select COUNT(*) FROM `Order`";
+             $connection=Yii::$app->db; 
+
+             $count=$connection->createCommand($sql)->queryScalar();
+           // echo $count;
             $connection=Yii::$app->db;
-            $sql = "select * from news ";
+            $sql = "select * from `Order` ";
             $condition = '';
             if($_POST['searchPhrase'] !='')
             {
@@ -93,7 +133,7 @@ class NewsController extends Controller
             $arr = array();
             foreach($model as $o)
             {
-                    $json = array('id'=>intval($o['id']), 'title'=>$o['title']);
+                    $json = array('id'=>intval($o['Id']), 'title'=>$o['Title']);
                     array_push($arr, $json);
 
             }
@@ -133,6 +173,7 @@ class NewsController extends Controller
                     $location = $_FILES["file"]["tmp_name"];
 //          echo $location;
                     move_uploaded_file($location, $destination);
+                    copy($destination, '../../yuleWeb/web/images/'.$filename);
                     echo '/images/' . $filename;//change this URL
                 }
                 else

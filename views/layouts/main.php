@@ -111,13 +111,6 @@ AppAsset::register($this);
 <body>
 
 
-
-
-
-
-
-
-
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -144,14 +137,20 @@ AppAsset::register($this);
 <div class="container-fluid">
 
     <?php if (!\Yii::$app->user->isGuest) {?>
-       <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
-            <ul class="nav" >
-                <li class="active"><a href="/index.php?r=site/index">首页</a></li>
-
-           <li><a href="/index.php?r=news/index">新闻管理</a></li>
-        
-    </ul>
-        </div>
+      <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+          <ul class="nav" >
+            <li class="active"><a href="/index.php?r=site/index">首页</a></li>
+            <li><a href="/index.php?r=orderlist/index">任务管理</a></li>
+            <li><a href="/index.php?r=users/index">用户管理</a></li>
+            <li><a href="/index.php?r=news/index">友商管理</a></li>
+            <li><a href="/index.php?r=tags/index">标签管理</a></li>
+            <li><a href="/index.php?r=idverification/index">身份认证管理</a></li>
+            <li><a href="/index.php?r=feedback/index">帮助与反馈管理</a></li>
+            <li><a href="/index.php?r=orderreport/index">任务举报</a></li>
+            <li><a href="/index.php?r=userreport/index">用户举报</a></li>
+             <li><a href="/index.php?r=withdraw/index">提现申请</a></li>
+          </ul>
+      </div>
         <?php }?>
 
 
